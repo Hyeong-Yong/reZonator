@@ -1,0 +1,163 @@
+{
+    "builtin_params": {
+        "lambda": {
+            "unit": "nm",
+            "value": 1026
+        }
+    },
+    "custom_params": {
+    },
+    "elements": [
+        {
+            "is_disabled": false,
+            "label": "M1",
+            "layout_draw_narrow": false,
+            "layout_show_label": true,
+            "params": {
+                "Alpha": {
+                    "unit": "deg",
+                    "value": 0
+                },
+                "R": {
+                    "unit": "mm",
+                    "value": 50
+                }
+            },
+            "title": "Back mirror",
+            "type": "ElemCurveMirror"
+        },
+        {
+            "is_disabled": false,
+            "label": "L",
+            "layout_draw_narrow": false,
+            "layout_show_label": true,
+            "params": {
+                "L": {
+                    "unit": "mm",
+                    "value": 80
+                },
+                "n": {
+                    "unit": "none",
+                    "value": 1
+                }
+            },
+            "title": "",
+            "type": "ElemEmptyRange"
+        },
+        {
+            "is_disabled": false,
+            "label": "M2",
+            "layout_draw_narrow": false,
+            "layout_show_label": true,
+            "params": {
+                "Alpha": {
+                    "unit": "deg",
+                    "value": 0
+                },
+                "R": {
+                    "unit": "mm",
+                    "value": 70
+                }
+            },
+            "title": "Output mirror",
+            "type": "ElemCurveMirror"
+        }
+    ],
+    "formulas": [
+    ],
+    "notes": "",
+    "param_links": [
+    ],
+    "pumps": [
+    ],
+    "schema_version": "2.0",
+    "title": "",
+    "trip_type": "SW",
+    "windows": [
+        {
+            "function": {
+                "arg": {
+                    "element_index": 1,
+                    "param": "L",
+                    "range": {
+                        "points": 100,
+                        "start": {
+                            "unit": "mm",
+                            "value": 0
+                        },
+                        "step": {
+                            "unit": "mm",
+                            "value": 0
+                        },
+                        "stop": {
+                            "unit": "mm",
+                            "value": 200
+                        },
+                        "use_step": false
+                    }
+                },
+                "stab_calc_mode": "Normal"
+            },
+            "type": "StabMap",
+            "window": {
+                "cursor_enabled": true,
+                "cursor_mode": "Both",
+                "stab_bound_markers": false,
+                "stored_views": {
+                },
+                "ts_flipped": false,
+                "ts_mode": "T+S",
+                "x_max": 202,
+                "x_min": -2,
+                "x_title": "{elem}, {elem_param} {(unit)}",
+                "x_unit": "mm",
+                "y_max": 1.05,
+                "y_min": -1.05,
+                "y_title": "Stability parameter {stab_mode}",
+                "y_unit": "none"
+            }
+        },
+        {
+            "function": {
+                "arg": {
+                    "element_index": 1,
+                    "param": "L",
+                    "range": {
+                        "points": 100,
+                        "start": {
+                            "unit": "mm",
+                            "value": 0
+                        },
+                        "step": {
+                            "unit": "mm",
+                            "value": 4.2
+                        },
+                        "stop": {
+                            "unit": "mm",
+                            "value": 420
+                        },
+                        "use_step": false
+                    }
+                },
+                "mode": "BeamRadius"
+            },
+            "type": "Caustic",
+            "window": {
+                "cursor_enabled": true,
+                "cursor_mode": "Both",
+                "stored_views": {
+                },
+                "ts_flipped": false,
+                "ts_mode": "T+S",
+                "x_max": 80.8,
+                "x_min": -0.8,
+                "x_title": "{elem} {(unit)}",
+                "x_unit": "mm",
+                "y_max": 0.24399832273930921,
+                "y_min": 0.08208429485825307,
+                "y_title": "{func_mode} {(unit)}",
+                "y_unit": "mm"
+            }
+        }
+    ]
+}
